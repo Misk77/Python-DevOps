@@ -54,7 +54,7 @@ i = 0 # räknar antal varv
 while (random.randrange(0, 101) != 20): # randomnbr mellan 1-100, så länge den ej slumpar 20
     i += 1
 
-    print('Antal varv: {0}, RandomNbr: {1}'.format(i, random.randrange(0, 101))) # Skriver ut antal varv och randomnbr
+    print('Antal varv: {0}, RandomNbr: {1} '.format(i, random.randrange(0, 101))) # Skriver ut antal varv och randomnbr
 
 
 
