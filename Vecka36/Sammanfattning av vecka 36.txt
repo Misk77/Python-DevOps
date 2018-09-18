@@ -1,0 +1,225 @@
+
+                      
+                                           LEKTION 1
+Funktioner har parenteser.
+
+Lista - Datastruktur
+Hakparenteser betecknar en lista
+['str,123,23.4]
+
+len ()- returnerar numer/index i en lista, räknar/sträng:   len(list1)
+append ()- lägger till element/värde i en lista:   aList.append( 2009 )  
+extend() - slår ihop listor :   aList.extend(bList)  bList slås ihop med aList
+
+append(), lägger till bakifrån
+
+remove() -Tar bort ett värde/element i aList:      aList.remove('abc');
+
+subset - en del av en lista, få it speciellt index från listan
+
+
+        Dictionary/tuple/List
+
+() -  tuple
+[] -  List
+{}-  Dictionary
+
+????????????
+keys
+get
+valve
+
+subset - 
+sortera - 
+append - 
+
+
+sets . 
+???????????????????????????
+
+########## Exempel på någon uppgift jag gjorde
+####################### Logga in först, Mata in ett tal och välj räknesätt, vad som ska ske med talet
+
+""""
+countNbr = 0
+name = 'Michel'
+loggIn = input('Skriv ditt namna: ')
+
+if name == loggIn:
+    print('Välkommen {0}'.format(name))
+else:
+    print('Hej {0}, Du har inte tillgång till detta konto, kontakta {1}'.format(loggIn, name))
+    countNbr = 1
+
+try:
+    while countNbr != 1:
+
+        number = (int)(input('Mata in en siffra: '))
+        countNbr = (int)(input(
+            "Vilken slags uträkning vill du göra?\n[1]-Avsluta\n[2]-Multplikation\n[3]Division\n[4]-Modulus\n[5]-Subtraktion\n[6]-Addition\n[7]-exponent\n"))
+        if countNbr == 2:
+            print('Ditt tal muliplicerat med ditt tal blir: {}'.format(number * number))
+        elif countNbr == 3:
+            print('Ditt tal Division med ditt tal blir: {}'.format(number / number))
+        elif countNbr == 4:
+            print('Ditt tal Modulus med ditt tal blir: {}'.format(number % number))
+        elif countNbr == 5:
+            print('Ditt tal Division med ditt tal blir: {}'.format(number - number))
+        elif countNbr == 6:
+            print('Ditt tal Subtraktion med ditt tal blir: {}'.format(number + number))
+        elif countNbr == 7:
+            print('Ditt tal exponent med ditt tal blir: {}'.format(number ** number))
+
+except:
+    print("Det var inte en siffra, kolla upp vad en siffra är innan du fortsätter")
+
+"""
+
+
+
+                                                             LEKTION 2
+i=0
+
+x=[1,2,3,4,5,6,7,8,9,10]
+
+while len(x) > z:
+         x[i]=x[i]*2
+          print(x[i])
+
+
+       FOR lopp för listor
+
+x=[]
+x=0
+
+while i <10:
+     x.append[i*2]
+     i+=1
+
+ALT 2
+
+while len(x) < 10:
+          x.append(len(x)*2)
+
+
+###  Exempel
+######  STRÄNG hantering
+
+"""
+
+largeStr = ('Kalle ANKA skulle GÅ till ANKEBORG men hade inga ankfötter som var dugliga för hans ändamål.')
+secondStr = ('"Kalle" "gick" "hem" "istället"!!!!!')
+isaplhaStr = ('! , 2,3,4')
+int = (1, 2, 3, 4, 5, 6, 7, 8)
+intList = [9, 10, 11, 12, 23]
+print(largeStr[3])
+print('-3: ', largeStr[-3])
+print('Len: ', len(largeStr))
+print('index', largeStr.index('till'))
+print('Hela strängen: ', largeStr)
+print('Lower: ', largeStr.lower())
+print('capitalize: ', largeStr.capitalize())
+print('swapcase: ', largeStr.swapcase())
+print('casefold: ', largeStr.casefold())
+print('center: ', largeStr.center(12))
+print('isalpha: ', isaplhaStr.isalpha())
+print('find: ', largeStr.find('kalle'))
+# print(largeStr.replace())
+# print(largeStr.split())
+t = list(largeStr)
+print('use list: ', t)
+s = largeStr.split() # Dela upp strängen
+print('split: ', s[10])  # ta fram delen av strängen/index som du vill se
+delimiter = '"'
+print(secondStr)
+print('delimiter: ',secondStr.split(delimiter))
+print(largeStr.join(secondStr))
+
+"""
+
+
+Gick igenom HTML-php-css ..väldigt snabb genomgång..........
+
+
+css - Cascading style Sheet
+responsive - anpassningsbar
+
+****Äldre html
+<table>  // fönster  typ
+      <tr> //  rader
+         <td>   //
+
+                 Innehållet
+
+         </td>
+     </tr>
+</table>
+
+***Nyare
+css
+-container     . betyder class(samma som #)
+
+<div class = "nameOnContainer">
+
+                 Innehållet
+
+</div>
+
+
+STRUKTUREN PÅ EN HP med HTML och CSS
+
+HTML strukturen:
+
+<html>
+<head>
+
+</head>
+
+<body>
+
+ Innehållet Innehållet Innehållet Innehållet Innehållet Innehållet
+ Innehållet Innehållet Innehållet Innehållet Innehållet
+
+</body>
+</html>
+
+
+
+
+CSS strukturen:
+
+.body.htlm{
+background:yellow;
+}
+
+,container{
+margin:auto;
+width:800px;
+height:800px;
+}
+
+
+Lägga till för anpassningbar:
+
+@media(max-width:600px){
+.Header,.container1,.container2,.container3,.container4,.container5{
+width:95%;
+height:95%;
+background:red;
+margin:auto;}
+}
+
+         
+
+                                   LEKTION 3 
+
+forsättning på ccs och htlm
+
+försöka få två container bredvid varandra
+
+
+
+                            LEKTION 4 
+
+satte upp en localhost via Apache24
+som vår htlm kunde läggas upp mot, se sidan via navkademin nätet

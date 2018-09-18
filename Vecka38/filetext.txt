@@ -1,0 +1,1 @@
+Skriver och lägger in nytt med append 'a'Skriver in och  lägger in ny text  med append 'a'my_file.write('Hej kalle anka\nThis is my textdokument made from python console\n')

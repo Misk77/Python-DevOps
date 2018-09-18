@@ -23,7 +23,7 @@ if x == 100:
 else:
     print('X Är inte i 100, stämmer inte') """
 
-print()
+
 """
 name = 'Michel'
 loggIn = input('Skriv ditt namna: ')
@@ -33,14 +33,17 @@ if name == loggIn:
 elif loggIn != name:
     print('Hej {0}, Du har inte tillgång till detta konto, kontakta {1}'.format(loggIn, name)) """
 
-print()
+
 """
+input()
 x = 10
 if x == 30:
     print('X är 30')
 elif x < 30 or x > 30:
     print('X är mindre eller större än 30') """
 
+######
+""""
 print()
 #  Function har parenteser efter sig
 #  random.randrange()  , funktionen
@@ -56,7 +59,7 @@ while (random.randrange(0, 101) != 20): # randomnbr mellan 1-100, så länge den
 
     print('Antal varv: {0}, RandomNbr: {1} '.format(i, random.randrange(0, 101))) # Skriver ut antal varv och randomnbr
 
-
+"""
 
 
 

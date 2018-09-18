@@ -1,7 +1,3 @@
-import sys
-import os
-import random
-
 ## Under Lektionstid :
 #
 
@@ -80,6 +76,7 @@ for x in range(0, 4):
 
 ## ALT 2
 """
+
 for r in range(0, 4):
     print()
     for k in range(0, 9):
@@ -90,6 +87,7 @@ for r in range(0, 4):
 ####### X ska bli Y
 
 """
+
 x = 10
 y = 20
 
@@ -243,9 +241,6 @@ print(förnamn, efternamn)
 print("Kalle " + "Anka")
 
 """
-
-
-
 
 ## Under Lektionstid :
 #
@@ -477,6 +472,3 @@ print(förnamn, efternamn)
 print("Kalle " + "Anka")
 
 """
-
-
-

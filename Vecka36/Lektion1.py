@@ -87,7 +87,6 @@ if item != SearchVar:
         
        """
 
-
 ####################### Logga in först, Mata in ett tal och välj räknesätt, vad som ska ske med talet
 
 """"
@@ -127,6 +126,7 @@ except:
 
 ############### Skapa en dictionary
 # Dictionary med måsvingar
+
 """
 minabilar = {'jeff': 'volvo',
              'peter': 'toyota'}

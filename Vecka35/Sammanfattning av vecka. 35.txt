@@ -71,6 +71,35 @@ ex:
 print((1+210)*4)
 ger - 28 i utskrift
 OBS!!  (viktigt med prioritering följden i aritmetiska uträkningar, räkneordningen)
+###  olika exempel
+Lägg in en rader eller flerarader kommentarer 
+i ditt program. Kontrollera att ditt program  
+exekverar felfritt. """
+
+print()
+print('Vi kan byta rad med backslash också så\nså här  \\n  Nu\nbyter\ni rad')
+
+print('Hej \" \" @Michel')
+print()
+print("""Hej Michel
+Nu byter vi rad
+igen""")
+print()
+print('Nackademin i solna')
+print('\"Nackademin i solna\"')
+print("\"nackademin \"i solna")
+"""Detta är en kommentar som inte kommer göra någonting i programmet"""
+print((1 + 2 - 10) * 4)
+print(5 ** 10)
+
+name = 'Michel'
+lastName = 'Skoglund'
+print(name, lastName)
+print(name + lastName)
+print('{0} {1}'.format(lastName, name))
+print('{1} {0}'.format(lastName, name))
+print('{0} {1}'.format(name, lastName))
+print('{1} {0}'.format(name, lastName))
 
                              
                                                   LEKTION 2
@@ -130,6 +159,50 @@ ex;
 randomNbr = random.randrange(1,101)  # Slumpar tal mellan 1-100
 print(randomNbr) # Skriver ut slumpat tal mellan 1-100
 
+### exempel
+print()
+x = 100
+if x == 100:
+    print('X är 100, det stämmer')
+else:
+    print('X Är inte i 100, stämmer inte') """
+
+
+name = 'Michel'
+loggIn = input('Skriv ditt namna: ')
+
+if name == loggIn:
+    print('Välkommen {0}'.format(name))
+elif loggIn != name:
+    print('Hej {0}, Du har inte tillgång till detta konto, kontakta {1}'.format(loggIn, name)) """
+
+####     SLumpa gissa talet
+################################################################3
+"""
+    randomNbr = random.randrange(0, 101)
+
+    print()
+
+while randomNbr != userNbr:
+    userNbr = (int)(input('Gissa på ett tal: '))
+    if userNbr != randomNbr and randomNbr <= randomNbr:
+        print('Talet är lågt, gissa igen: ')
+    elif userNbr != randomNbr and randomNbr >= randomNbr:
+        print('Talet är högt, gissa igen: ')
+    elif userNbr == randomNbr:
+        print('Grattis du gissade rätt,  talet är: {1}'.format(randomNbr))"""
+
+
+###
+print()
+temp = (int(input('Hur många grader är vattnet: ')))
+
+if temp >= 25:
+    print('Vi badar')
+elif temp >= 10 and temp <= 24:
+    print('*Är du säker, inte så varmt i vattnet...')
+elif temp < 10:
+    print('Vi kommer INTE bada!') """
 
                                                                LEKTION 3
 
@@ -145,3 +218,149 @@ ex;
 for r in range(0, 4):
     for k in range(0, 4):
         print(('*')+('*')*3)
+
+##### exempel
+
+##############################    exponent    """"""""""""""""""""""""""""""""""""""""""""""""
+
+""""
+x = (int)(input('Vilken exponenttabell du vill se: '))
+
+for i in range(11):
+    value = x ** i
+    print("{} * {} = {}".format(x, i, value))
+
+################3
+
+#################  Matris ,
+"""
+x = 0
+y = 0
+while y < 4:
+    y += 1
+    for x in range(0, 4):
+        print("\n|---------------|")
+        print(("|"), end="")
+        for y in range(0, 4):
+            print((" * "), end="|")
+   
+print("\n|---------------|")
+
+"""
+
+################# Reversed range  reversed(range(0, 11))
+"""
+for x in reversed(range(0, 11)):
+    x **= x
+"""
+##################### Matriss ####################
+"""
+for x in range(0, 4):
+        print("\n|---------------|")
+        print(("|"), end="")
+        for y in range(0, 4):
+            print((" * "), end="|")
+
+"""
+
+####### X ska bli Y
+
+"""
+x = 10
+y = 20
+
+z = x # skapa tom variabel som tar x värdet
+x = y # x får y värdet 
+y = z # y får z värdet som har gamla x värdet
+
+print(x, y)
+####### X ska bli Y *** ONELINERS
+
+
+#### Byta värdet med python inbygga byta värde mellan variabler
+
+"""
+x,y = y,x  # uttryck som anropar funktionen som byter värde på variablen
+
+print(x, y)
+"""
+
+förbättrad rabattprogram
+# print()print()
+pris = float(input('Ange produktens summa: '))
+rabatt = float(input('Ange rabatten: '))
+medRabatt = pris * rabatt
+rabatteratPris = pris - medRabatt
+print('Du skrev in pris: {0} och rabatten: {1}. Ditt rabatterande pris blir: {2} '.format(pris, rabatt, rabatteratPris))
+print()
+# Övning 5
+# Räkna
+print()
+volym = float(input('Ange tankad volym: '))
+pris = float(input('Ange liter priset: '))
+betala = volym * pris
+
+print()
+
+print("""\n
++-------------------------------+
+|           KVITTO              |
+|                               |
+|    Tankad volym {0} liter    | 
+|    Pris per liter {1} kronor |
+|    Betala kronor {2}        |
+|                               |
+|    Tack för besöket och       |
+|    välkommen åter!            |                            |
++-------------------------------+""".format(volym, pris, betala))
+print()
+
+BMI uträkning
+print()
+lenght = int(input('Skriv in din längd i centimeter: '))
+vikt = int(input('skriv in din vikt i kg: '))
+lenght2 = lenght / 100
+bmi = vikt / (lenght2 * lenght2)
+print('Ditt BMI är: {0:.1f}'.format(bmi))
+
+##
+Räknaut bmi sedan skriver ut status ang bmi
+print()
+lenght = int(input('Ange din längd: '))
+weight = int(input('Ange din vikt: '))
+lenght /= 100
+bmi = weight / (lenght * lenght)
+print()
+if bmi < 18.5:
+    print('Ditt bmi är: {:.2f}'.format(bmi))
+    print('Du har undervikt')
+elif bmi >= 18.5 or bmi < 25:
+    print('Ditt bmi är: {:.2f}'.format(bmi))
+    print('Du har normalvikt')
+elif bmi >= 25 or bmi < 30:
+    print('Ditt bmi är: {}'.format(bmi))
+    print('Du har övervikt')
+elif bmi > 30:
+    print('Ditt bmi är: {}'.format(bmi))
+    print('Du har tyvärr fetma')
+else:
+    print('Något blev fel')
+
+###
+fråga efter bensinpris sedan utskrift med tex för olika värden
+print()
+
+bensinPris = int(input('Ange bensinpriset: '))
+
+if bensinPris < 10:
+    print('Bensin priset du skrev in var: {}'.format(bensinPris))
+    print('Det var billigt')
+elif bensinPris >= 10 and bensinPris <= 15:
+    print('Bensin priset du skrev in var: {}'.format(bensinPris))
+    print('Tanka full tank')
+elif bensinPris >= 15 and bensinPris <= 20:
+    print('Bensin priset du skrev in var: {}'.format(bensinPris))
+    print('Tanka 10 liter')
+else:
+    print('Bensin priset du skrev in var: {}'.format(bensinPris))
+    print('Nu säljer jag bilen och cyklar istället')

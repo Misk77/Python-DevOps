@@ -18,7 +18,7 @@ name = (input('Hej vad heter du?: '))  # Tar in ditt namn
 print('Hello {} '.format(name))  # Skriver ut text plus namnet
 
 """Ov 3. 
-- Lägg in en rads eller flerrads kommentarer 
+- Lägg in en rader eller flerarader kommentarer 
 i ditt program. Kontrollera att ditt program  
 exekverar felfritt. """
 
@@ -47,7 +47,9 @@ lastName = 'Skoglund'
 print(name, lastName)
 print(name + lastName)
 print('{0} {1}'.format(lastName, name))
+print('{1} {0}'.format(lastName, name))
 print('{0} {1}'.format(name, lastName))
+print('{1} {0}'.format(name, lastName))
 
 """ÖV 6.
  - Lägg upp några matematiska beräkningar 
