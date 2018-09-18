@@ -1,0 +1,67 @@
+###############   TUPLE and LIST - ARRAY
+# tuple makes by the comma , , with parethes its easier to see and divied,but not needed
+# Tuple cant change value , IMMUTABLE
+# List can change value, MUTABLE
+# t = 1,
+# t = (1,)
+# t = (1,2,3,4,5,6,)
+# List makes by square brackets []
+# x=[1,2,3,4,5,6]
+
+t = 1,
+t1 = (1,)
+t2 = (1, 2, 3, 4, 5, 6, 23)
+print(t)
+print(type(t))
+print(t1)
+print(type(t1))
+print(t2)
+print(type(t2))
+print()
+aList = [1, 2, 3, 4, 89]
+print(aList)
+print(type(aList))
+print()
+
+########## Different method to use:
+
+# min()
+# max()
+# len()
+# t(0)
+# t(4)
+# aList[0]
+# aList[4]
+print(t2)
+print(type(t2)) # type
+print(t2[2]) # index 2
+print(min(t2)) # min value
+print(max(t2)) max value
+print(len(t2)) #lenght
+print()
+# Same thing with List
+print(aList)
+print(type(aList))
+print(aList[2])
+print(min(aList))
+print(max(aList))
+print(len(aList))
+
+################## Create a TUPLE and fill it up to 25
+# IMMUTABLE  you cant change the element,value
+print()
+t = tuple(range(25))
+print(t)
+
+################## Create a LIST, and fill up to 25
+# MUTABLE you can change elemnt, value
+print()
+aList = list(range(25))
+print(aList)
+aList[10] = 99
+print(aList)
+
+###### Cons and Pro for Tuple and List #####
+
+# Tuple, more secure, faster, cant be change, same data all the time
+# List, then you need to be able to change data
