@@ -70,7 +70,22 @@ with open('kalle.txt', 'r+') as my_file2:
     print(my_file2.read())
 
 
-
+######### Likadan som ovan FAST med try/except
+## ifall filen ej hittas, ges ett svar ang detta
+fname = input('Ange filnamnet du söker: ')
+try:
+    f = open(fname)
+except:
+    print('Cant be found', fname)
+    exit()
+inp = input('Ange fras du söker: ')
+count = 0
+with open(fname, 'r+') as f:
+    for line in f:
+        if line.find(inp):
+            count = count + 1
+print('there were', count, 'Find your frase in line', fname)
+print('-----------------')
 
 #####  Kopiera filer /  fyll andra dukument
 ##### Kopiera en fil
@@ -100,3 +115,243 @@ try:
 except IOError as e:
     print(rf2,'{}'-format(e)) // fel rf2 ????
 
+
+#####Egen version på att skapa en fil
+
+###Skapa en fil fast säkert på fel sätt!!
+# enda lösningen jag kom på
+fname = input('Ange filnamnet du söker: ')
+try:
+    f = open(fname)
+    with open(fname, 'a+') as f:
+        f = open(fname)
+    inp = input('Ange fras du söker: ')
+except:
+    create = input('Filen hittades ej, vill du skapa en textfil?: (j/n)')
+    if create != 'n' or create != 'N':
+        with open(fname, 'a+') as f:
+            inp = print(f.write(input('Ange vad du vill skriva i din nya fil')))
+else:
+    print('Okej, då skapar vi ingen ny fil')
+print('-----------------')
+"""
+######
+### Using repr()  built in functions
+#return a string representation of a object
+s = '1,2\t 3\n 4'
+print(s)
+print(repr(s))
+
+
+#########################  LEKTION 2 ##################
+### OOP - Objektorienterad programmering (Object Oriented Programming, 
+#
+###   Allt anses vara objekt
+## Egenskaper eller attribut
+## objekt används för att modellera, skapa verklighet, det man vill framställa
+
+# Objekt har olika funktioner/egenskaper-vad objektet gör eller heter(actions)
+     # punknotation- man kmr åt klassens egenskaper via punknotation
+##  1. Skapa Class definition - "Blueprint"
+#Class Person:
+##  2. Skapa ett objekt av klassen, instansiering
+# objekt av klassen
+
+### Första uppgiften
+#Alt 1
+Class Person:
+       def __init__(self)
+                self.name='Michel'
+
+
+person1=Person()
+
+
+#  Exempel: __name = 'Michel'    __ gör den privat, utan är den en global
+class Person:
+    __name = None  # __ = private
+    __yrke = None  # annars GLOBAL
+    __country = None
+
+    def __init__(self, name, yrke, country):
+        self.__name = name
+        self.__yrke = yrke
+        self.__country = country
+
+## För att komma åt privata måste man skapa en get och set, dessa finns men 
+#vi skapar en egen som gör samma sak, fast heter valfritt:
+
+    def set_newName(self, name):
+        self.__name = name
+
+     def get_Name(self):
+        return self.__name
+
+## Då ser det ut så här:
+class Person:
+    __name = None  # __ = private
+    __yrke = None  # annars GLOBAL
+    __country = None
+
+    def __init__(self, name, yrke, country):
+        self.__name = name
+        self.__yrke = yrke
+        self.__country = country
+
+    def set_newName(self, name):
+        self.__name = name
+
+    def set_yrke(self, yrke):
+        self.__yrke = yrke
+
+    def set_country(self, country):
+        self.__country = country
+
+    def get_Name(self):
+        return self.__name
+
+    def get_Yrke(self):
+        return self.__yrke
+
+    def get_country(self):
+        return self.__country
+
+## Skriva ut dessa egenskaper kan ske 'Manuellt' via anrop eller , lägga in input direkt
+person1 = Person(input('Ange name: '), input('Ange yrke: '),input('Ange land: '))
+#
+print('{0} is the coolest cat in town\nYour write your name: {0}\nAnd your age is: {1}\nAnd you living in: {2}'.format(person1.get_Name(), person1.get_Yrke(),person1.get_country()))
+
+### Nedan hela koden:
+class Person:
+    __name = None  # __ = private
+    __yrke = None  # annars GLOBAL
+    __country = None
+
+    def __init__(self, name, yrke, country):
+        self.__name = name
+        self.__yrke = yrke
+        self.__country = country
+
+    def set_newName(self, name):
+        self.__name = name
+
+    def set_yrke(self, yrke):
+        self.__yrke = yrke
+
+    def set_country(self, country):
+        self.__country = country
+
+    def get_Name(self):
+        return self.__name
+
+    def get_Yrke(self):
+        return self.__yrke
+    def get_country(self):
+        return self.__country
+
+
+person1 = Person(input('Ange name: '), input('Ange yrke: '),input('Ange land: '))
+
+print('{0} is the coolest cat in town\nYour write your name: {0}\nAnd your age is: {1}\nAnd you living in: {2}'.format(person1.get_Name(), person1.get_Yrke(),person1.get_country()))
+
+
+
+
+### Nedan egen uppgift:
+#
+###### OOP - Object oriented Programmin
+## Lektion 1
+
+class Person:
+    def __init__(self, name, age, country):
+        self.all = name, age, country
+
+
+print('skriv in Player 1:')
+person1 = Person(input('Vad heter du:\n'), int(input('Ange ålder:\n')), input('Ange Land:\n'))
+print('skriv in Player 2:')
+person2 = Person(input('Vad heter du:\n'), int(input('Ange ålder:\n')), input('Ange Land:\n'))
+print('\nPlayers in the game are:\n')
+print('Player 1')
+for item in person1.all:
+    print(item)
+print()
+print('Player 2')
+for item in person2.all:
+    print(item)
+
+print('----------')
+
+
+
+# addTwo function
+def addTwo(a, b):
+    added = a + b
+    return added
+
+
+#### Skriv talen som går in i function addTwo
+nbr1 = int(input('Ange tal: '))
+nbr2 = int(input('Ange tal: '))
+x = addTwo(nbr1, nbr2)
+
+print(x)
+
+# Instans: skapa verkliget object av class
+"""
+Person1 = Person()
+print(Person1)
+
+Person2 = Person()
+print(Person2)
+print('-------Person1---------')
+# Instans
+Person1.name = 'Michel'
+print(Person1.name)
+Person1.age = 42
+print(Person1.age)
+Person1.country = 'Sweden'
+print(Person1.country)
+print('----------------')
+print(Person1.name, Person1.age, Person1.country)
+
+print('-------Person2---------')
+
+Person2.name = 'Stina'
+print(Person2.name)
+Person2.age = 13
+print(Person2.age)
+Person2.country = 'Krigslida'
+print(Person2.country)
+print('----------------')
+print(Person2.name, Person2.age, Person2.country)
+
+"""
+#### Michel funtion -ej klar, slutade med denna - TA BORT!!!
+"""
+
+def Michel(name, age):
+    print(name)
+    print(age)
+
+
+name = input('Vad heter du: ')
+age = int(input('Ange ålder'))
+print(Michel(name, age))
+"""
+##
+
+########### 
+// Lättare att se hur Parametrar fungerar:
+# addTwo function
+def addTwo(a, b):
+    added = a + b
+    return added
+
+
+#### Skriv talen som går in i function addTwo
+nbr1 = int(input('Ange tal: '))
+nbr2 = int(input('Ange tal: '))
+x = addTwo(nbr1, nbr2)
+
+print(x)
