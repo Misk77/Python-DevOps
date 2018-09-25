@@ -1,0 +1,54 @@
+Project 3-save profiles
+
+
+# superclass - Huvud klassen är;     Profile
+# subclass - den som ärver från superclass;  PersonalInfo
+# 
+
+satt priv på class och def variabler, får att set, och get, sätta, returnera så måste dom få access
+vi sk set, get
+set_newname(self,newname):
+self.name=newname
+
+def __init__(self,parameterar)
+
+## Arv
+
+class PersonalInfo(Profile) # Detta gör så att klassen ärver från Profile
+    ange attribut för classen, variabel att komma åt
+
+skapa en konstruktor
+i denna konstruktor måste alla paramterar från nya,arv classen och super klassen
+och avslutas med super()__init__(paramterar från superklassen)
+#ex;  super().__init__(superklass parametrar)
+
+class PersonalInfo(Profile):  #subclass
+    __name = None  # __ = private
+    __yrke = None  # annars GLOBAL
+
+    def __init__(self, parametrar som får tillgång ):
+        self.__hobbies = hobbies
+        super().__init__()
+
+# Dessa är privata så behövs set och get ,för att sätta nytt värde och hämta nytt värde
+#ex;    def set_hobbies(self, hobbies):
+        self.set__hobbies = hobbies
+
+    def get_hobbies(self):
+        return self.__hobbies
+
+
+
+#Sedan har en while loop, satt till true, så den kan lägga in profiler tills man 
+trycker 'n' eller 'N'
+
+#try, except ifall användaren matar in någon som interpreter inte kan tolka
+# fel, data
+# olika val ifall man vill söka eller avsluta, man kan skapa nytt textdokument eller så
+#kan man söka i anvädar profilen efter någon kriterier som man vill
+#och profilerna sparas på datorn eller mot json
+
+
+
+
+
