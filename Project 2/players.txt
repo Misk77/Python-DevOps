@@ -1,0 +1,3 @@
+('sd', 34, 'df')
+('hj', 67, 'gh')('Kalle', 23, 'ankeborg')
+('stina', 13, 'stinis')
