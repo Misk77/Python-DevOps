@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 # coding=utf8
 import egna_def
+import random
 
 a, b = 0, 0
 while True:
@@ -14,7 +15,8 @@ while True:
               \n[6]-Ta redan på summan och medelvärde av olika tal
               \n[7]-Ta reda på vad ett ord blir baklänges
               \n[8]-Vill du skriva in 10 tal  i en lista och se största resp minsta talet
-              \n[9]-beräkning med ett tal""")
+              \n[9]-beräkning med ett tal
+              \n[10]-Kasta tärning""")
     if inp == '1':
         egna_def.area_rektangel(a, b)
     if inp == '2':
@@ -33,3 +35,5 @@ while True:
         egna_def.listantal()
     if inp == '9':
         egna_def.calculation()
+    if inp == '10':
+        egna_def.dice()
