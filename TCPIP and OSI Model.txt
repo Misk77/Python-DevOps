@@ -1,0 +1,49 @@
+Michel skoglund om TCP och UDP
+Devops - 
+
+
+Ett operativsystem består av två lager api och hal, api arbetar mot applicationer(mjukivara) och hal mot hårdvaran(drivrutiner etc). 
+
+(utan hal skulle man behöva installera om varje drivrutin till en hårdvara varje gång den ska användas
+Detta är också en av BIOS, basic i/o system uppgift att köra igenom och kontrollera och initiera program och funktioner som behövs.
+detta flödes hjälp och hanteras av kärnan, kernel, en av dom kändaste kernel är linux kernel.
+ 
+
+I api så finns flera olika "lager ' indelningar. för olika mjukvara och hårdvara beroende på vilket lager  dom ska arbeta mot.
+Detta är bestämd enligt DoD, sedan i början var arpa,arpanet som också var en av dom inblandad i internets/datorers historia och arm  för mindre robusta enheter.
+Detta har tagit över mer och mer av darpa
+
+Detta skedde utan större regler och utan tanke på vad som skulle hända när internet blev "allmännt", så dom skapade protocoler och regler
+för att ha koll och veta hur tillverkarna och användarna använde och fick använda gällande information som rörde sig via inet. sk internet,
+
+vanligaste protocolet är ipv4 som börjar att ta slut så övergången till ipv6 har påbörjats för några år sedan.
+skillnaden är att ipv4 var indelade i klasser a,b,c(d,e)  men dessa räcker inte då ipv4 är  16 bitar och ipv6 32 bitars hexadecimal.
+
+Dom mest kända protcolen är IP, TCP/IP, UDP, (ip har fått ett nytt (protcol nytt lager) på ca 4 bitar för vlan)
+
+TCP/IP  är indelat i några protokoll mot övre lagret av os, i fyra delar: dessa delar använda när ett applikation görs
+och så måste tillverkarna använda rätt protokoll för rätt "vara"
+
+API -api, coding,controll issue: - vanliga protokoll: DNS,SMTP
+HOST to HOST - transport, flödet i kommunikations födet och fel och delar upp;  vanliga protokoll: TCP UDP
+Internet- är mera riktiat mot routes, och detinationer, skicka packet , hitta rätt bland router och metric etc: vanliga protokoll: IP,ARP
+Network access - Tar hand om direkt kontakt med hårdvara och media LAN och externt sk WAN: vanliga protokoll: Ethernet, Token ring
+
+Båda dessa som vi kommer prata  mera om nedan,  ligger automatiskt i IP protokollet, som många av dessa gör auto.
+
+TCP - Transmission Control Protocol- har i första hand om sända/mottaget,  delar upp och ser till att allting kmr i rätt ordning och 
+dessa paket får nummer och på så vis vet protokollet vilken ordning dom ska in i flödet. lite som gamlabusar och pipline till processorn
+kan sända och ta emot samtidigt.
+TCP är mer stabilt och används när man vet att kommunikationen ej får avbrytas, alltså  lite tvärtom än UDP
+exempelvis: email, internet, fil överföring, fjärrstyrning
+
+
+
+UDP - User Datagram Protocol; är en rakare protokoll och har inte lika mycket regler/kontroller, data att tänka på, som mesta dels ser till all allting sänds och kommer fram utan avbrott, har inte så många regler
+Denna data sänd bara , så fort som möjligt utan felkoll och tanke om hur det kommer fram, bara det kommer fra, väntar inte på svar från servern/clienten
+data kan gå förlorad.... exempelvis via streaming, online gaming, skype, röst kommunikation etc
+
+
+
+
+
